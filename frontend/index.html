@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PhishGuard AI | Security Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                🛡️ <span>PhishGuard</span>
+            </div>
+
+            <nav>
+                <a href="#" class="active">Dashboard</a>
+                <a href="#">URL Scanner</a>
+                <a href="#">Scan History</a>
+                <a href="#">Analytics</a>
+                <a href="#">Model</a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="#">⚙ Settings</a>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main">
+
+            <!-- Top bar -->
+            <header class="topbar">
+
+                <div>
+                    <h1>Security Dashboard</h1>
+                    <p>AI-powered phishing detection</p>
+                </div>
+
+                <div class="status">
+                    <span class="status-dot"></span>
+                    API Online
+                </div>
+
+            </header>
+
+
+            <!-- Scanner -->
+            <section class="scanner-card">
+
+                <div class="scanner-content">
+
+                    <span class="eyebrow">PHISHING DETECTION</span>
+
+                    <h2>Check a website before you trust it.</h2>
+
+                    <p>
+                        Enter a URL and PhishGuard AI will analyze
+                        it for potential phishing threats.
+                    </p>
+
+                    <div class="search-box">
+
+                        <input
+                            type="text"
+                            id="urlInput"
+                            placeholder="https://example.com"
+                        >
+
+                        <button id="scanBtn">
+                            Scan URL
+                        </button>
+
+                    </div>
+                    <div id="resultCard" class="result-card hidden">
+
+    <div class="result-header">
+        <div>
+            <span class="eyebrow">SCAN RESULT</span>
+            <h3 id="resultTitle">Safe Website</h3>
+        </div>
+
+        <div id="resultBadge" class="safe">
+            SAFE
+        </div>
+    </div>
+
+    <p id="resultUrl"></p>
+
+    <div class="result-details">
+
+        <div>
+            <span>Confidence</span>
+            <strong id="confidence">98.4%</strong>
+        </div>
+
+        <div>
+            <span>Risk Level</span>
+            <strong id="riskLevel">LOW</strong>
+        </div>
+
+    </div>
+    <div class="result-reason">
+    <span>Detection Reason</span>
+    <p id="resultReason">No major suspicious URL patterns detected</p>
+</div>
+
+</div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Statistics -->
+            <section class="stats">
+
+                <div class="stat-card">
+                    <span>Total Scans</span>
+                    <strong id="totalScans">1,248</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Safe URLs</span>
+                    <strong id="safeUrls">932</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Phishing URLs</span>
+                    <strong id="phishingUrls">316</strong>
+                </div>
+
+                <div class="stat-card">
+                    <span>Detection Rate</span>
+                    <strong>96.8%</strong>
+                </div>
+
+            </section>
+
+
+            <!-- Bottom section -->
+            <section class="content-grid">
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <h3>Recent Scans</h3>
+                        <button>View All</button>
+                    </div>
+
+                    <div id="scanList">
+
+                        <div class="scan-row">
+                            <div>
+                                <strong>google.com</strong>
+                                <small>2 minutes ago</small>
+                            </div>
+
+                            <span class="safe">SAFE</span>
+                        </div>
+
+                        <div class="scan-row">
+                            <div>
+                                <strong>amazon.in</strong>
+                                <small>8 minutes ago</small>
+                            </div>
+
+                            <span class="safe">SAFE</span>
+                        </div>
+
+                        <div class="scan-row">
+                            <div>
+                                <strong>secure-login-example.com</strong>
+                                <small>15 minutes ago</small>
+                            </div>
+
+                            <span class="danger">PHISHING</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <div class="panel-header">
+                        <h3>Risk Overview</h3>
+                    </div>
+
+                    <div class="risk-container">
+
+                        <div class="risk-circle">
+                            <strong>25%</strong>
+                            <span>Risk</span>
+                        </div>
+
+                        <div class="risk-info">
+                            <p><span class="legend safe-bg"></span> Safe — 75%</p>
+                            <p><span class="legend danger-bg"></span> Phishing — 25%</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
